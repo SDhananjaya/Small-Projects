@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+</head>
+<body>
+    <h2>Wellcome !</h2>
+    <input id="box" type="value" maxlength="7"/>  <button onclick="add()">Check</button> <br/>
+
+    <p>Result : - <span id="one"></span></p>
+
+    Score : - <h3 id="score"></h3>
+
+
+    <script>
+
+       
+        
+        function add(){
+            var randoom=Math.floor(Math.random()*10)+1
+            var num=document.getElementById("box").value;
+            var result=document.getElementById("one");
+            var score=document.getElementById("score");
+             var points= 10;
+
+                if(randoom == num){
+            result.innerHTML="You Win"
+            
+                }else{
+            points=points-1
+            score.textContent='points:'+points
+            result.innerHTML="You loose"
+                }
+        }
+    document.getElementById("score").innerHTML=result+1
+ 
+    </script>
+</body>
+</html>
